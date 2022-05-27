@@ -15,6 +15,8 @@ for i in range(1,len(arrlist)+1):
     iter = itertools.combinations(arrlist,i)
     reslist.append(list(iter)) 
 
+
+print("如下组合相加,可以得到结果:",equValue)
 for a in reslist:
     for b in a:
         if round(sum(b),2) == equValue :
