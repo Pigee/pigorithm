@@ -2,8 +2,13 @@
 # this program import give an number array, and expect a combine of element to add  get the result of  a certain number..
 import itertools
 
-print("Hi,Pigee!")
-arrlist = [0.20,29.70,69.25,-9.50,-3.10,12.90,0.05,0.05]
+print("请输入一维数组以,分隔:")
+arr = input("")
+arrlist = [float(n) for n in arr.split(',')]
+# print(arrlist)
+print("请输入求和结果:")
+equValue = float(input(""))
+
 reslist = []
 
 for i in range(1,len(arrlist)+1):
@@ -12,5 +17,7 @@ for i in range(1,len(arrlist)+1):
 
 for a in reslist:
     for b in a:
-        if sum(b) < 2 and sum(b) > -2:
+        if round(sum(b),2) == equValue :
+        #if sum(b) < 2 and sum(b) > -2:
+            #print(b,sum(b))
             print(b,round(sum(b),2))
