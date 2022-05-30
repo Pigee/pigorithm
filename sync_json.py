@@ -14,7 +14,7 @@ dataUrl = 'http://xxxxxx.com:xxxxxx/seeyon/rest/cap4/form/soap/export'
 # access info 
 accessKey = {
     'userName': 'rest',
-    'password': '8698238d-01db-4787-bddc-825504877ade'
+    'password': 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
 }
 
 #Mysql connection
@@ -98,7 +98,7 @@ def insertData():
                       update_date, w_1642732438262, w_1642732440485, w_1642732444424, w_1642732444767, w_1642732445083, w_1644375318174,
                       w_1652424475608, w_1652424524290, w_1652424585213, w_1652424622556, w_1652424641260, w_1652424666669, w_1652424711872,
                       w_1652424727668, w_1652424740567, w_1652424757817) 
-                      select replace(uuid(),'-',''), 'jj', '晋江自来水有限公司',now(), 'jj', '晋江自来水有限公司',now(),
+                      select replace(uuid(),'-',''), 'jj', 'xxxxxxxxxxxxxx',now(), 'jj', 'xxxxxxxxxxxx',now(),
                       concat(t2.field0004,'_',t2.field0006,'_',date_format(now(),'%Y%m'),'_0',left(rand()*100000,3)), 
                       t2.field0015, t2.field0003, t2.field0004, t2.field0006, t2.field0009, t2.field0001, t2.field0002, t2.field0005,
                       t2.field0007, t2.field0008, t2.field0014, t2.field0019, t2.field0018, t2.field0016, t2.field0017
