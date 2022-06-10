@@ -2,6 +2,9 @@
 '''
 parse xml data and insert into mysql
 http://data.discogs.com/?prefix=data/2022/
+ freeArtistsMeta (id, name,realname, profile,data_quality,images,namevariations,aliases,members,urls)
+ freeMasters (id, main_release,videos,images,artists, data_quality,genres,styles,year,title)
+ freeRelease (id, notes,formats,images,artists, labels,genres,styles,released,country)
 '''
 import xml.etree.ElementTree as ET
  
