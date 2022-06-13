@@ -10,8 +10,9 @@ http://data.discogs.com/?prefix=data/2022/
 
 import time
 from lxml import etree
-import pymysql
+# import pymysql
 
+'''
 conn = pymysql.connect(
     host="localhost",
     user="root",
@@ -20,8 +21,9 @@ conn = pymysql.connect(
     charset="utf8mb4")
 
 cursor = conn.cursor()
+'''
 
-infile = r'art.xml'
+infile = r'artsmall.xml'
 
 # declare all variable
 rellist = [0,'','','','','','','','','']
@@ -90,13 +92,13 @@ for event, element in etree.iterparse(infile,events=("start", "end"),encoding='U
 
     elif event == "end" and element.tag == "artist":
              
-        # print(rellist)
+        print(rellist)
 
         if int(rellist[0]) < y:
             insertlist.append(rellist)
         else:
-            cursor.executemany('insert into freeart (id, name,realname, profile,data_quality,images,namevariations,aliases,members,urls) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',insertlist)
-            conn.commit()
+            # cursor.executemany('insert into freeart (id, name,realname, profile,data_quality,images,namevariations,aliases,members,urls) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',insertlist)
+            # conn.commit()
             print(time.strftime("%Y-%m-%d %X", time.localtime()),':Handle to ',rellist[0],'records...')
             y += 2000
             insertlist = []

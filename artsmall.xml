@@ -1,4 +1,7 @@
 <artists>
+    <artist><images><image type="primary" uri="" uri150="" width="600" height="450"/></images><id>6947</id><name>Full Swing</name><realname>Stephan Mathieu</realname><profile></profile><data_quality>Needs Vote</data_quality><aliases><name id="53728">Stephan Mathieu</name></aliases></artist>
+<artist><images><image type="primary" uri="" uri150="" width="255" height="191"/><image type="secondary" uri="" uri150="" width="600" height="400"/><image type="secondary" uri="" uri150="" width="600" height="400"/></images><id>6949</id><name>Cyclo.</name><realname>Cyclo</realname><profile></profile><data_quality>Correct</data_quality><namevariations><name>Cyclo</name></namevariations><members><id>11139</id><name id="11139">Ryoji Ikeda</name><id>178718</id><name id="178718">Carsten Nicolai</name></members></artist>
+
     <artist>
         <images>
             <image type="primary" uri="" uri150="" width="600" height="450"/>
