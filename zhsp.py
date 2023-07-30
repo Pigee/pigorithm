@@ -11,7 +11,8 @@ db = pymysql.connect(host='localhost',
 
 # 使用 cursor() 方法创建一个游标对象 cursor
 cursor = db.cursor()
-
+# zhjl ck	cktime	id	ye
+# zhxx id ed khsj ye
 # 随机获得一条客户信息
 def getzh(jl):
     sql = " SELECT ye,khsj,id from zhxx where khsj < %s and ye > 0 order by rand() limit 1 "
