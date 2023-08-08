@@ -15,7 +15,7 @@ import (
 
 // https://stackoverflow.com/questions/23121026/how-to-sort-by-time-time
 // https://github.com/gocarina/gocsv
-// https://zhidao.baidu.com/question/1373065820887869539.html  
+// https://zhidao.baidu.com/question/1373065820887869539.html
 //  (关于excel保存为csv格式后，重新打开文本型数字变为科学计数，且15位后面变成0)
 
 type Zhxx struct {
@@ -41,7 +41,7 @@ func (xs xxSlice) Updateye(id string, e float64) {
 	for i, item := range xs {
 		if item.Id == id {
 			if xs[i].Ye > e {
-				xs[i].Ye,_ = decimal.NewFromFloat(xs[i].Ye - e).Round(2).Float64()
+				xs[i].Ye, _ = decimal.NewFromFloat(xs[i].Ye - e).Round(2).Float64()
 			} else {
 				xs[i].Ye = 0
 			}
@@ -107,7 +107,7 @@ func main() {
 				jlone.Cktimestr = jlone.Cktime.Format("2006-01-02 15:04:05")
 
 				fmt.Println(jlone)
-				zhjl_exp = append(zhjl_exp, jlone)
+			  zhjl_exp = append(zhjl_exp, jlone)
 			}
 
 			zh.Updateye(zhye.Id, jlck) // Update zh Slice
@@ -155,7 +155,10 @@ func main() {
 
 func getZhxx(f string) xxSlice {
 	timeFormat := "2006-01-02 15:04:05"
-	var LOC, _ = time.LoadLocation("Asia/Shanghai")
+	var LOC, err = time.LoadLocation("Asia/Shanghai")
+	if err != nil {
+		LOC = time.FixedZone("CST", 8*3600) //替换上海时区
+	}
 	var xxslice xxSlice
 	var xx Zhxx
 
@@ -200,7 +203,10 @@ func getZhxx(f string) xxSlice {
 
 func getZhjl(f string) jlSlice {
 	timeFormat := "2006-01-02 15:04:05"
-	var LOC, _ = time.LoadLocation("Asia/Shanghai")
+	var LOC, err = time.LoadLocation("Asia/Shanghai")
+	if err != nil {
+		LOC = time.FixedZone("CST", 8*3600) //替换上海时区
+	}
 	var jlslice jlSlice
 	var jl Zhjl
 
